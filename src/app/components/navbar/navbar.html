@@ -1,0 +1,51 @@
+<nav class="bg-primary-700 text-white shadow-lg">
+  <div class="container mx-auto px-6 py-3">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center" (click)="navigateToHome()">
+        <i data-feather="cpu" class="h-8 w-8 mr-2"></i>
+        <span class="font-semibold text-xl">BlueOath VIETNAM</span>
+      </div>
+      <div class="hidden md:flex space-x-8">
+        <a href="/privacy" class="hover:text-primary-200">Privacy Policy</a>
+        <a href="/eula" class="hover:text-primary-200">EULA</a>
+        <a href="/contact" class="hover:text-primary-200">Contact</a>
+      </div>
+
+      <div class="-mr-2 flex items-center md:hidden">
+        <button
+          type="button"
+          (click)="toggleMobileMenu()"
+          class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+        >
+          <span class="sr-only">Open side menu</span>
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="mobileMenuOpen" class="md:hidden bg-primary-700 border-t">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a
+        href="/home"
+        class="block text-primary-100"
+        >Home</a
+      >
+      <a
+        href="/privacy"
+        class="block text-primary-100"
+        >Privacy</a
+      >
+      <a
+        href="/eula"
+        class="block text-primary-100"
+        >EULA</a
+      >
+      <a
+        href="/contact"
+        class="block text-primary-100"
+        >Contact</a
+      >
+    </div>
+  </div>
+</nav>
